@@ -3,10 +3,10 @@
 Latents-based conformational control in OpenFold3.
 
 <p align="center">
-  <a href="https://arxiv.org/abs/TBD">
+  <a href="https://arxiv.org/abs/2604.18559">
     <img src="https://img.shields.io/badge/arXiv-Paper-b31b1b">
   </a>
-  <a href="https://x.com/TBD">
+  <a href="https://x.com/m1nj12/status/2046615914179916059">
     <img src="https://img.shields.io/badge/X-Thread-111111">
   </a>
 </p>
