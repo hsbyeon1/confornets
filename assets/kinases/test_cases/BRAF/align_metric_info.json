@@ -1,0 +1,33 @@
+{
+  "queries": {},
+  "references": {
+    "6U2H_C": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          240
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          141,
+          154
+        ]
+      ]
+    },
+    "5CSX_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          256
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          141,
+          154
+        ]
+      ]
+    }
+  }
+}

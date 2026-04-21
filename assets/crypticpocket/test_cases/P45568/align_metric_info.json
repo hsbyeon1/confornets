@@ -1,0 +1,33 @@
+{
+  "queries": {},
+  "references": {
+    "1K5H_C": {
+      "alignment_resid_ranges": [
+        [
+          201,
+          225
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          201,
+          225
+        ]
+      ]
+    },
+    "2EGH_B": {
+      "alignment_resid_ranges": [
+        [
+          201,
+          225
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          201,
+          225
+        ]
+      ]
+    }
+  }
+}

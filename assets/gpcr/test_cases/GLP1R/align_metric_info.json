@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "GLP1R": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          202
+        ],
+        [
+          203,
+          268
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          203,
+          234
+        ]
+      ]
+    }
+  },
+  "references": {
+    "7RTB_R": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          263
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          203,
+          234
+        ]
+      ]
+    },
+    "5VEW_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          243
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          185,
+          216
+        ]
+      ]
+    }
+  }
+}

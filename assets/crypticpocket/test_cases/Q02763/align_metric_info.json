@@ -1,0 +1,49 @@
+{
+  "queries": {},
+  "references": {
+    "1FVR_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          18
+        ],
+        [
+          142,
+          160
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          0,
+          18
+        ],
+        [
+          142,
+          160
+        ]
+      ]
+    },
+    "2OO8_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          3
+        ],
+        [
+          113,
+          131
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          0,
+          3
+        ],
+        [
+          113,
+          131
+        ]
+      ]
+    }
+  }
+}

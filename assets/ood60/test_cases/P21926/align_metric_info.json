@@ -1,0 +1,33 @@
+{
+  "queries": {},
+  "references": {
+    "6RLO_C": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          76
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          0,
+          76
+        ]
+      ]
+    },
+    "6RLR_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          78
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          0,
+          78
+        ]
+      ]
+    }
+  }
+}

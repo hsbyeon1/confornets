@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "OPRM": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          198
+        ],
+        [
+          203,
+          275
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          203,
+          242
+        ]
+      ]
+    }
+  },
+  "references": {
+    "8E0G_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          275
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          203,
+          242
+        ]
+      ]
+    },
+    "7UL4_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          268
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          196,
+          235
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "MTR1A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          199
+        ],
+        [
+          204,
+          276
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          204,
+          242
+        ]
+      ]
+    }
+  },
+  "references": {
+    "7VGY_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          266
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          201,
+          232
+        ]
+      ]
+    },
+    "6ME2_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          267
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          196,
+          233
+        ]
+      ]
+    }
+  }
+}

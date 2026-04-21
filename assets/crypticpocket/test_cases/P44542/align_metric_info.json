@@ -1,0 +1,49 @@
+{
+  "queries": {},
+  "references": {
+    "6H76_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          65
+        ],
+        [
+          132,
+          202
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          0,
+          65
+        ],
+        [
+          132,
+          202
+        ]
+      ]
+    },
+    "2CEY_A": {
+      "alignment_resid_ranges": [
+        [
+          -1,
+          65
+        ],
+        [
+          132,
+          202
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          -1,
+          65
+        ],
+        [
+          132,
+          202
+        ]
+      ]
+    }
+  }
+}

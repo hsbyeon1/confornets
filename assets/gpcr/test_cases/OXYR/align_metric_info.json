@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "OXYR": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          204
+        ],
+        [
+          229,
+          298
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          229,
+          266
+        ]
+      ]
+    }
+  },
+  "references": {
+    "7RYC_O": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          268
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          201,
+          236
+        ]
+      ]
+    },
+    "6TPK_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          259
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          191,
+          227
+        ]
+      ]
+    }
+  }
+}

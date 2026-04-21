@@ -1,0 +1,33 @@
+{
+  "queries": {},
+  "references": {
+    "4U45_A": {
+      "alignment_resid_ranges": [
+        [
+          1,
+          289
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          152,
+          167
+        ]
+      ]
+    },
+    "4RVT_B": {
+      "alignment_resid_ranges": [
+        [
+          15,
+          297
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          151,
+          166
+        ]
+      ]
+    }
+  }
+}

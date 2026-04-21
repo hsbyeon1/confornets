@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "ACM2": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          205
+        ],
+        [
+          357,
+          425
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          357,
+          395
+        ]
+      ]
+    }
+  },
+  "references": {
+    "7T94_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          257
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          196,
+          230
+        ]
+      ]
+    },
+    "5ZK8_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          257
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          196,
+          227
+        ]
+      ]
+    }
+  }
+}

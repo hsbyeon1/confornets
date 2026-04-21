@@ -1,0 +1,24 @@
+.claude
+.ruff_cache
+.pytest_cache
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+.DS_Store
+*.egg-info/
+
+# Processed assets
+assets/*/msa
+assets/*/batch
+assets/*/query_msa.json
+assets/*/query.json
+
+# Results
+results/
+*.npy
+output/
+
+# External binaries
+packages/USalign

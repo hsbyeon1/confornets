@@ -1,0 +1,10 @@
+defaults:
+  rmsd_threshold: 3.0
+  metrics: [rmsd]
+  bootstrap_trials: 100
+  consistent: false
+
+benchmarks:
+  toy_benchmark:
+    consistent: true
+    rmsd_threshold: 2.0

@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "TSHR": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          197
+        ],
+        [
+          201,
+          268
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          201,
+          237
+        ]
+      ]
+    }
+  },
+  "references": {
+    "7UTZ_R": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          260
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          197,
+          229
+        ]
+      ]
+    },
+    "7T9M_R": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          264
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          197,
+          233
+        ]
+      ]
+    }
+  }
+}

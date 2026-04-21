@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "AA1R": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          210
+        ],
+        [
+          215,
+          286
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          215,
+          255
+        ]
+      ]
+    }
+  },
+  "references": {
+    "7LD3_R": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          276
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          208,
+          245
+        ]
+      ]
+    },
+    "5UEN_B": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          270
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          206,
+          239
+        ]
+      ]
+    }
+  }
+}

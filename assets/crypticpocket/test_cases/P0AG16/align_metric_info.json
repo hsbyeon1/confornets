@@ -1,0 +1,33 @@
+{
+  "queries": {},
+  "references": {
+    "1ECJ_D": {
+      "alignment_resid_ranges": [
+        [
+          322,
+          358
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          322,
+          358
+        ]
+      ]
+    },
+    "1ECC_B": {
+      "alignment_resid_ranges": [
+        [
+          322,
+          358
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          322,
+          358
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "ADRB1": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          213
+        ],
+        [
+          242,
+          313
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          242,
+          284
+        ]
+      ]
+    }
+  },
+  "references": {
+    "8DCS_R": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          263
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          200,
+          234
+        ]
+      ]
+    },
+    "4BVN_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          275
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          204,
+          246
+        ]
+      ]
+    }
+  }
+}

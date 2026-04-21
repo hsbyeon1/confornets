@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "S1PR5": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          198
+        ],
+        [
+          202,
+          273
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          202,
+          241
+        ]
+      ]
+    }
+  },
+  "references": {
+    "7EW1_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          254
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          186,
+          222
+        ]
+      ]
+    },
+    "7YXA_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          242
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          177,
+          210
+        ]
+      ]
+    }
+  }
+}

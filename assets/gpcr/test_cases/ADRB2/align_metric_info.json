@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "ADRB2": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          212
+        ],
+        [
+          236,
+          303
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          236,
+          274
+        ]
+      ]
+    }
+  },
+  "references": {
+    "8GG0_R": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          271
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          210,
+          242
+        ]
+      ]
+    },
+    "6PS2_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          269
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          203,
+          240
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "queries": {},
+  "references": {
+    "1NEP_A": {
+      "alignment_resid_ranges": [
+        [
+          90,
+          105
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          90,
+          105
+        ]
+      ]
+    },
+    "2HKA_C": {
+      "alignment_resid_ranges": [
+        [
+          90,
+          105
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          90,
+          105
+        ]
+      ]
+    }
+  }
+}

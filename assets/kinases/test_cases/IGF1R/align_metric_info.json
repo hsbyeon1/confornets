@@ -1,0 +1,33 @@
+{
+  "queries": {},
+  "references": {
+    "3QQU_B": {
+      "alignment_resid_ranges": [
+        [
+          5,
+          288
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          149,
+          162
+        ]
+      ]
+    },
+    "8PYK_A": {
+      "alignment_resid_ranges": [
+        [
+          7,
+          274
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          151,
+          164
+        ]
+      ]
+    }
+  }
+}

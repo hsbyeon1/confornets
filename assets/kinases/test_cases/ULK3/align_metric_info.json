@@ -1,0 +1,33 @@
+{
+  "queries": {},
+  "references": {
+    "6FDY_U": {
+      "alignment_resid_ranges": [
+        [
+          2,
+          261
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          138,
+          163
+        ]
+      ]
+    },
+    "6FDZ_U": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          226
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          144,
+          169
+        ]
+      ]
+    }
+  }
+}

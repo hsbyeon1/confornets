@@ -1,0 +1,49 @@
+{
+  "queries": {},
+  "references": {
+    "1W50_A": {
+      "alignment_resid_ranges": [
+        [
+          52,
+          63
+        ],
+        [
+          192,
+          201
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          52,
+          63
+        ],
+        [
+          192,
+          201
+        ]
+      ]
+    },
+    "3IXJ_C": {
+      "alignment_resid_ranges": [
+        [
+          53,
+          64
+        ],
+        [
+          192,
+          201
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          53,
+          64
+        ],
+        [
+          192,
+          201
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "queries": {},
+  "references": {
+    "3EOC_A": {
+      "alignment_resid_ranges": [
+        [
+          5,
+          295
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          136,
+          163
+        ]
+      ]
+    },
+    "6Q4F_A": {
+      "alignment_resid_ranges": [
+        [
+          26,
+          293
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          134,
+          161
+        ]
+      ]
+    }
+  }
+}

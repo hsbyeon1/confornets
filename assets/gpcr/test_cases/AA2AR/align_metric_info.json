@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "AA2AR": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          213
+        ],
+        [
+          218,
+          291
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          218,
+          259
+        ]
+      ]
+    }
+  },
+  "references": {
+    "6GDG_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          256
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          188,
+          224
+        ]
+      ]
+    },
+    "5NM4_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          281
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          208,
+          249
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "queries": {},
+  "references": {
+    "7F7P_A": {
+      "alignment_resid_ranges": [
+        [
+          1,
+          80
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          1,
+          80
+        ]
+      ]
+    },
+    "7MSL_A": {
+      "alignment_resid_ranges": [
+        [
+          1,
+          80
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          1,
+          80
+        ]
+      ]
+    }
+  }
+}

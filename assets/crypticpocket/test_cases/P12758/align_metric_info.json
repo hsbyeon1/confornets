@@ -1,0 +1,49 @@
+{
+  "queries": {},
+  "references": {
+    "1K3F_B": {
+      "alignment_resid_ranges": [
+        [
+          160,
+          190
+        ],
+        [
+          223,
+          240
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          160,
+          190
+        ],
+        [
+          223,
+          240
+        ]
+      ]
+    },
+    "1U1D_F": {
+      "alignment_resid_ranges": [
+        [
+          157,
+          187
+        ],
+        [
+          220,
+          237
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          157,
+          187
+        ],
+        [
+          220,
+          237
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "CCR6": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          206
+        ],
+        [
+          208,
+          281
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          208,
+          246
+        ]
+      ]
+    }
+  },
+  "references": {
+    "6WWZ_R": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          281
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          208,
+          246
+        ]
+      ]
+    },
+    "9D3G_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          254
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          189,
+          224
+        ]
+      ]
+    }
+  }
+}

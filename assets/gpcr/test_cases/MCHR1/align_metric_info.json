@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "MCHR1": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          199
+        ],
+        [
+          207,
+          278
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          207,
+          246
+        ]
+      ]
+    }
+  },
+  "references": {
+    "8WWK_R": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          277
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          206,
+          245
+        ]
+      ]
+    },
+    "8YNS_R": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          261
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          190,
+          229
+        ]
+      ]
+    }
+  }
+}

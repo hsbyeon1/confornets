@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "ADA1A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          203
+        ],
+        [
+          241,
+          310
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          241,
+          279
+        ]
+      ]
+    }
+  },
+  "references": {
+    "8THK_R": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          244
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          183,
+          214
+        ]
+      ]
+    },
+    "8HN1_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          251
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          190,
+          220
+        ]
+      ]
+    }
+  }
+}

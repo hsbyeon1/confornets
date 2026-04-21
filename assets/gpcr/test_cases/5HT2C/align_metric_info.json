@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "5HT2C": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          197
+        ],
+        [
+          246,
+          318
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          246,
+          284
+        ]
+      ]
+    }
+  },
+  "references": {
+    "8DPF_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          252
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          182,
+          220
+        ]
+      ]
+    },
+    "6BQH_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          263
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          192,
+          229
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "CNR1": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          201
+        ],
+        [
+          220,
+          289
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          220,
+          258
+        ]
+      ]
+    }
+  },
+  "references": {
+    "8GHV_D": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          260
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          195,
+          229
+        ]
+      ]
+    },
+    "9BA0_R": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          258
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          190,
+          227
+        ]
+      ]
+    }
+  }
+}

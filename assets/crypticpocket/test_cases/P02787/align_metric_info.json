@@ -1,0 +1,33 @@
+{
+  "queries": {},
+  "references": {
+    "1BP5_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          321
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          0,
+          321
+        ]
+      ]
+    },
+    "1RYO_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          321
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          0,
+          321
+        ]
+      ]
+    }
+  }
+}

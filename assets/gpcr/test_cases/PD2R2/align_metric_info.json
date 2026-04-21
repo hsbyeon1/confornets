@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "PD2R2": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          205
+        ],
+        [
+          209,
+          276
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          209,
+          241
+        ]
+      ]
+    }
+  },
+  "references": {
+    "8XXV_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          266
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          199,
+          231
+        ]
+      ]
+    },
+    "7M8W_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          272
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          205,
+          237
+        ]
+      ]
+    }
+  }
+}

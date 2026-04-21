@@ -1,0 +1,33 @@
+{
+  "queries": {},
+  "references": {
+    "6GTS_B": {
+      "alignment_resid_ranges": [
+        [
+          10,
+          67
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          10,
+          67
+        ]
+      ]
+    },
+    "6AJM_C": {
+      "alignment_resid_ranges": [
+        [
+          6,
+          63
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          6,
+          63
+        ]
+      ]
+    }
+  }
+}

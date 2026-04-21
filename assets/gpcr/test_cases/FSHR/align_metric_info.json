@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "FSHR": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          196
+        ],
+        [
+          201,
+          268
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          201,
+          237
+        ]
+      ]
+    }
+  },
+  "references": {
+    "8I2G_R": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          268
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          201,
+          237
+        ]
+      ]
+    },
+    "8I2H_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          263
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          196,
+          232
+        ]
+      ]
+    }
+  }
+}

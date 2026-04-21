@@ -1,0 +1,33 @@
+{
+  "queries": {},
+  "references": {
+    "7SJ3_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          241
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          137,
+          163
+        ]
+      ]
+    },
+    "5FWM_K": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          291
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          148,
+          174
+        ]
+      ]
+    }
+  }
+}

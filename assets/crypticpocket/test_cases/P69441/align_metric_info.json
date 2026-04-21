@@ -1,0 +1,33 @@
+{
+  "queries": {},
+  "references": {
+    "4AKE_B": {
+      "alignment_resid_ranges": [
+        [
+          103,
+          198
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          103,
+          198
+        ]
+      ]
+    },
+    "1ANK_B": {
+      "alignment_resid_ranges": [
+        [
+          103,
+          198
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          103,
+          198
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "queries": {},
+  "references": {
+    "2CGA_B": {
+      "alignment_resid_ranges": [
+        [
+          183,
+          198
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          183,
+          198
+        ]
+      ]
+    },
+    "1AFQ_C": {
+      "alignment_resid_ranges": [
+        [
+          34,
+          49
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          34,
+          49
+        ]
+      ]
+    }
+  }
+}

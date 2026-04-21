@@ -1,0 +1,33 @@
+{
+  "queries": {},
+  "references": {
+    "2JDO_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          311
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          142,
+          167
+        ]
+      ]
+    },
+    "8Q61_A": {
+      "alignment_resid_ranges": [
+        [
+          18,
+          350
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          247,
+          267
+        ]
+      ]
+    }
+  }
+}

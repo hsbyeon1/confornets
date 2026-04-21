@@ -1,0 +1,33 @@
+{
+  "queries": {},
+  "references": {
+    "1PZT_A": {
+      "alignment_resid_ranges": [
+        [
+          170,
+          227
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          170,
+          227
+        ]
+      ]
+    },
+    "1PZY_D": {
+      "alignment_resid_ranges": [
+        [
+          170,
+          227
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          170,
+          227
+        ]
+      ]
+    }
+  }
+}

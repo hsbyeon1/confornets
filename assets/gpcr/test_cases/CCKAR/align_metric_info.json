@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "CCKAR": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          207
+        ],
+        [
+          262,
+          335
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          262,
+          301
+        ]
+      ]
+    }
+  },
+  "references": {
+    "7MBX_R": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          278
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          205,
+          244
+        ]
+      ]
+    },
+    "7F8U_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          274
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          202,
+          240
+        ]
+      ]
+    }
+  }
+}

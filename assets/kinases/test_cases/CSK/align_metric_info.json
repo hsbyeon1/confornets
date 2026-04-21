@@ -1,0 +1,33 @@
+{
+  "queries": {},
+  "references": {
+    "3D7T_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          249
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          141,
+          152
+        ]
+      ]
+    },
+    "1BYG_A": {
+      "alignment_resid_ranges": [
+        [
+          8,
+          246
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          138,
+          149
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "queries": {},
+  "references": {
+    "1JWP_A": {
+      "alignment_resid_ranges": [
+        [
+          189,
+          200
+        ],
+        [
+          243,
+          263
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          189,
+          200
+        ],
+        [
+          243,
+          263
+        ]
+      ]
+    },
+    "1PZO_A": {
+      "alignment_resid_ranges": [
+        [
+          189,
+          200
+        ],
+        [
+          243,
+          263
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          189,
+          200
+        ],
+        [
+          243,
+          263
+        ]
+      ]
+    }
+  }
+}

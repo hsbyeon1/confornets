@@ -1,0 +1,33 @@
+{
+  "queries": {},
+  "references": {
+    "3PIX_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          268
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          143,
+          166
+        ]
+      ]
+    },
+    "7KXM_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          271
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          145,
+          168
+        ]
+      ]
+    }
+  }
+}

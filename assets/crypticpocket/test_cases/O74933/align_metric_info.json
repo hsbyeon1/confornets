@@ -1,0 +1,49 @@
+{
+  "queries": {},
+  "references": {
+    "2YQC_A": {
+      "alignment_resid_ranges": [
+        [
+          98,
+          114
+        ],
+        [
+          273,
+          324
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          98,
+          114
+        ],
+        [
+          273,
+          324
+        ]
+      ]
+    },
+    "2YQS_A": {
+      "alignment_resid_ranges": [
+        [
+          95,
+          111
+        ],
+        [
+          270,
+          321
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          95,
+          111
+        ],
+        [
+          270,
+          321
+        ]
+      ]
+    }
+  }
+}

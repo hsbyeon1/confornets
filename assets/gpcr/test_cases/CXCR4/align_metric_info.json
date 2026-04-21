@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "CXCR4": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          200
+        ],
+        [
+          204,
+          276
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          204,
+          239
+        ]
+      ]
+    }
+  },
+  "references": {
+    "8U4N_R": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          270
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          198,
+          233
+        ]
+      ]
+    },
+    "3OE0_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          265
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          195,
+          230
+        ]
+      ]
+    }
+  }
+}

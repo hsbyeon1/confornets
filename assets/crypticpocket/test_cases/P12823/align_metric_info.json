@@ -1,0 +1,49 @@
+{
+  "queries": {},
+  "references": {
+    "1OK8_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          55
+        ],
+        [
+          129,
+          380
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          0,
+          55
+        ],
+        [
+          129,
+          380
+        ]
+      ]
+    },
+    "1OKE_B": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          55
+        ],
+        [
+          129,
+          394
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          0,
+          55
+        ],
+        [
+          129,
+          394
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "queries": {},
+  "references": {
+    "7OZ3_A": {
+      "metric_resid_ranges": [
+        [
+          61,
+          115
+        ]
+      ]
+    },
+    "7B5Y_A": {
+      "metric_resid_ranges": [
+        [
+          61,
+          115
+        ]
+      ]
+    }
+  }
+}

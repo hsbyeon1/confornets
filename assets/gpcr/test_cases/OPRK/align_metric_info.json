@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "OPRK": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          200
+        ],
+        [
+          205,
+          277
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          205,
+          244
+        ]
+      ]
+    }
+  },
+  "references": {
+    "8FEG_B": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          271
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          199,
+          238
+        ]
+      ]
+    },
+    "6VI4_B": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          257
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          192,
+          231
+        ]
+      ]
+    }
+  }
+}

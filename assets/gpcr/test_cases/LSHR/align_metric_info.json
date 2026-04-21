@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "LSHR": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          196
+        ],
+        [
+          201,
+          268
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          201,
+          237
+        ]
+      ]
+    }
+  },
+  "references": {
+    "7FII_R": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          268
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          201,
+          237
+        ]
+      ]
+    },
+    "7FIJ_R": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          263
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          196,
+          232
+        ]
+      ]
+    }
+  }
+}

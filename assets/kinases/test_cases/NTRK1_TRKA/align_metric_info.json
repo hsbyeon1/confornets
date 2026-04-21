@@ -1,0 +1,33 @@
+{
+  "queries": {},
+  "references": {
+    "5KVT_A": {
+      "alignment_resid_ranges": [
+        [
+          11,
+          287
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          158,
+          171
+        ]
+      ]
+    },
+    "4PMS_A": {
+      "alignment_resid_ranges": [
+        [
+          25,
+          283
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          156,
+          169
+        ]
+      ]
+    }
+  }
+}

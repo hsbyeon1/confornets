@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "FZD7": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          211
+        ],
+        [
+          215,
+          305
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          215,
+          268
+        ]
+      ]
+    }
+  },
+  "references": {
+    "7EVW_R": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          288
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          215,
+          264
+        ]
+      ]
+    },
+    "9EPO_D": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          293
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          207,
+          256
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "queries": {},
+  "references": {
+    "3PEO_G": {
+      "alignment_resid_ranges": [
+        [
+          131,
+          138
+        ],
+        [
+          171,
+          188
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          131,
+          138
+        ],
+        [
+          171,
+          188
+        ]
+      ]
+    },
+    "2BYS_J": {
+      "alignment_resid_ranges": [
+        [
+          128,
+          135
+        ],
+        [
+          168,
+          185
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          128,
+          135
+        ],
+        [
+          168,
+          185
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "queries": {},
+  "references": {
+    "1PKL_B": {
+      "alignment_resid_ranges": [
+        [
+          20,
+          177
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          20,
+          177
+        ]
+      ]
+    },
+    "3HQP_P": {
+      "alignment_resid_ranges": [
+        [
+          20,
+          177
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          20,
+          177
+        ]
+      ]
+    }
+  }
+}

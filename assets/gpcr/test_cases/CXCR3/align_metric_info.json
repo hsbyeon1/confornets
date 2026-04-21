@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "CXCR3": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          201
+        ],
+        [
+          204,
+          277
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          204,
+          240
+        ]
+      ]
+    }
+  },
+  "references": {
+    "8HNM_R": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          262
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          189,
+          225
+        ]
+      ]
+    },
+    "8K2W_R": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          264
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          194,
+          227
+        ]
+      ]
+    }
+  }
+}

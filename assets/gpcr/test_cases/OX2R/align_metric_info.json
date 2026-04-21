@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "OX2R": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          204
+        ],
+        [
+          236,
+          315
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          236,
+          278
+        ]
+      ]
+    }
+  },
+  "references": {
+    "7L1V_R": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          273
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          197,
+          236
+        ]
+      ]
+    },
+    "5WQC_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          273
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          199,
+          236
+        ]
+      ]
+    }
+  }
+}

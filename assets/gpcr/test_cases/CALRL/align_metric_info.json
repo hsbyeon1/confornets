@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "CALRL": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          192
+        ],
+        [
+          201,
+          258
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          201,
+          225
+        ]
+      ]
+    }
+  },
+  "references": {
+    "6UVA_R": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          246
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          196,
+          220
+        ]
+      ]
+    },
+    "7KNT_R": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          239
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          190,
+          214
+        ]
+      ]
+    }
+  }
+}

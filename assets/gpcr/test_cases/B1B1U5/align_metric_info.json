@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "B1B1U5": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          205
+        ],
+        [
+          207,
+          277
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          207,
+          246
+        ]
+      ]
+    }
+  },
+  "references": {
+    "9EPP_R": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          288
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          201,
+          257
+        ]
+      ]
+    },
+    "6I9K_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          226
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          179,
+          198
+        ]
+      ]
+    }
+  }
+}

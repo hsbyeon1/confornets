@@ -1,0 +1,33 @@
+{
+  "queries": {},
+  "references": {
+    "1BNC_B": {
+      "alignment_resid_ranges": [
+        [
+          87,
+          193
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          87,
+          193
+        ]
+      ]
+    },
+    "2V5A_A": {
+      "alignment_resid_ranges": [
+        [
+          87,
+          217
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          87,
+          217
+        ]
+      ]
+    }
+  }
+}

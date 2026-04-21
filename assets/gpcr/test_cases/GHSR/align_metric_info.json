@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "GHSR": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          208
+        ],
+        [
+          213,
+          288
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          213,
+          253
+        ]
+      ]
+    }
+  },
+  "references": {
+    "7NA8_R": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          271
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          198,
+          236
+        ]
+      ]
+    },
+    "6KO5_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          275
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          208,
+          248
+        ]
+      ]
+    }
+  }
+}

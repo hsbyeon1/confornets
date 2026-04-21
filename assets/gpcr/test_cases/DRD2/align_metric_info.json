@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "DRD2": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          196
+        ],
+        [
+          331,
+          399
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          331,
+          369
+        ]
+      ]
+    }
+  },
+  "references": {
+    "7JVR_R": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          257
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          192,
+          227
+        ]
+      ]
+    },
+    "6CM4_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          250
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          184,
+          220
+        ]
+      ]
+    }
+  }
+}

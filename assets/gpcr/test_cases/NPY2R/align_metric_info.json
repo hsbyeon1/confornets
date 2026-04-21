@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "NPY2R": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          206
+        ],
+        [
+          208,
+          281
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          208,
+          247
+        ]
+      ]
+    }
+  },
+  "references": {
+    "8K6N_E": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          281
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          208,
+          247
+        ]
+      ]
+    },
+    "7DDZ_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          275
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          203,
+          241
+        ]
+      ]
+    }
+  }
+}

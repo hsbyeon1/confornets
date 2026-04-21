@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "ACM3": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          205
+        ],
+        [
+          416,
+          484
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          416,
+          454
+        ]
+      ]
+    }
+  },
+  "references": {
+    "8E9Z_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          263
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          201,
+          233
+        ]
+      ]
+    },
+    "4U15_B": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          262
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          197,
+          232
+        ]
+      ]
+    }
+  }
+}

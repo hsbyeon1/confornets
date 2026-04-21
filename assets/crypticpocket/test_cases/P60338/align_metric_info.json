@@ -1,0 +1,49 @@
+{
+  "queries": {},
+  "references": {
+    "1EXM_A": {
+      "alignment_resid_ranges": [
+        [
+          104,
+          169
+        ],
+        [
+          306,
+          401
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          104,
+          169
+        ],
+        [
+          306,
+          401
+        ]
+      ]
+    },
+    "1HA3_B": {
+      "alignment_resid_ranges": [
+        [
+          80,
+          145
+        ],
+        [
+          282,
+          377
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          80,
+          145
+        ],
+        [
+          282,
+          377
+        ]
+      ]
+    }
+  }
+}

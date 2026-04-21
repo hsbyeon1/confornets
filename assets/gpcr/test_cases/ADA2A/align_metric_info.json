@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "ADA2A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          203
+        ],
+        [
+          332,
+          399
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          332,
+          370
+        ]
+      ]
+    }
+  },
+  "references": {
+    "9CBL_R": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          244
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          179,
+          215
+        ]
+      ]
+    },
+    "6KUX_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          253
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          188,
+          224
+        ]
+      ]
+    }
+  }
+}

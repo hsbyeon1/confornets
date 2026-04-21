@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "CCR2": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          196
+        ],
+        [
+          197,
+          272
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          197,
+          237
+        ]
+      ]
+    }
+  },
+  "references": {
+    "7XA3_R": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          272
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          197,
+          237
+        ]
+      ]
+    },
+    "6GPX_B": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          261
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          193,
+          226
+        ]
+      ]
+    }
+  }
+}

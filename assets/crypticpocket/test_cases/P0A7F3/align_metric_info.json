@@ -1,0 +1,33 @@
+{
+  "queries": {},
+  "references": {
+    "2AIR_D": {
+      "alignment_resid_ranges": [
+        [
+          67,
+          98
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          67,
+          98
+        ]
+      ]
+    },
+    "1ZA1_D": {
+      "alignment_resid_ranges": [
+        [
+          66,
+          97
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          66,
+          97
+        ]
+      ]
+    }
+  }
+}

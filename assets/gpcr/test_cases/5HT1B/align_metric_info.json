@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "5HT1B": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          200
+        ],
+        [
+          258,
+          328
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          258,
+          296
+        ]
+      ]
+    }
+  },
+  "references": {
+    "6G79_S": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          249
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          186,
+          221
+        ]
+      ]
+    },
+    "5V54_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          252
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          190,
+          226
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "SMO": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          211
+        ],
+        [
+          215,
+          315
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          215,
+          274
+        ]
+      ]
+    }
+  },
+  "references": {
+    "6XBK_R": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          307
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          215,
+          274
+        ]
+      ]
+    },
+    "7ZI0_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          302
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          206,
+          261
+        ]
+      ]
+    }
+  }
+}

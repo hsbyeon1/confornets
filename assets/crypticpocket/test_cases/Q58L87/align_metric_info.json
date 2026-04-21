@@ -1,0 +1,49 @@
+{
+  "queries": {},
+  "references": {
+    "2WGB_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          39
+        ],
+        [
+          84,
+          122
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          0,
+          39
+        ],
+        [
+          84,
+          122
+        ]
+      ]
+    },
+    "2V57_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          35
+        ],
+        [
+          80,
+          118
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          0,
+          35
+        ],
+        [
+          80,
+          118
+        ]
+      ]
+    }
+  }
+}

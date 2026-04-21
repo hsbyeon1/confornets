@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "CCR5": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          203
+        ],
+        [
+          204,
+          279
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          204,
+          244
+        ]
+      ]
+    }
+  },
+  "references": {
+    "7O7F_C": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          279
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          204,
+          244
+        ]
+      ]
+    },
+    "6MEO_B": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          278
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          203,
+          243
+        ]
+      ]
+    }
+  }
+}

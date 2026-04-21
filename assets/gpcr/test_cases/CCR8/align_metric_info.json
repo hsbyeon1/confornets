@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "CCR8": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          198
+        ],
+        [
+          200,
+          273
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          200,
+          238
+        ]
+      ]
+    }
+  },
+  "references": {
+    "8XML_R": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          215
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          164,
+          196
+        ]
+      ]
+    },
+    "8TLM_C": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          255
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          195,
+          224
+        ]
+      ]
+    }
+  }
+}

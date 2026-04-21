@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "EDNRB": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          217
+        ],
+        [
+          221,
+          299
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          221,
+          260
+        ]
+      ]
+    }
+  },
+  "references": {
+    "8IY5_R": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          299
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          221,
+          260
+        ]
+      ]
+    },
+    "5GLI_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          291
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          213,
+          252
+        ]
+      ]
+    }
+  }
+}

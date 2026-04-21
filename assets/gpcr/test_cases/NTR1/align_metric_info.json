@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "NTR1": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          215
+        ],
+        [
+          236,
+          312
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          236,
+          274
+        ]
+      ]
+    }
+  },
+  "references": {
+    "8FN1_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          269
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          198,
+          232
+        ]
+      ]
+    },
+    "7UL2_R": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          258
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          187,
+          223
+        ]
+      ]
+    }
+  }
+}

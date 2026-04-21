@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "NK1R": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          204
+        ],
+        [
+          207,
+          281
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          207,
+          247
+        ]
+      ]
+    }
+  },
+  "references": {
+    "8U26_R": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          267
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          197,
+          233
+        ]
+      ]
+    },
+    "6E59_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          271
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          200,
+          237
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+defaults:
+  rmsd_threshold: 3.0
+  metrics: [rmsd]
+  bootstrap_trials: 100
+  consistent: false
+
+benchmarks:
+  kinases:
+    rmsd_threshold: 2.0
+    consistent: true
+  gpcr:
+    consistent: true
+    rmsd_threshold: 2.0
+  crypticpocket:
+    rmsd_threshold: 1.0
+  membrane:
+    consistent: true
+    rmsd_threshold: 2.0
+  domainmotion:
+    rmsd_threshold: 3.0
+  foldswitching:
+    rmsd_threshold: 3.0
+  ood60:
+    rmsd_threshold: 3.0

@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "HRH3": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          200
+        ],
+        [
+          311,
+          380
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          311,
+          349
+        ]
+      ]
+    }
+  },
+  "references": {
+    "8YN5_R": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          274
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          205,
+          243
+        ]
+      ]
+    },
+    "7F61_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          269
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          200,
+          238
+        ]
+      ]
+    }
+  }
+}

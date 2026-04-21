@@ -1,0 +1,33 @@
+{
+  "queries": {},
+  "references": {
+    "8ARC_B": {
+      "alignment_resid_ranges": [
+        [
+          14,
+          62
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          14,
+          62
+        ]
+      ]
+    },
+    "8ARB_B": {
+      "alignment_resid_ranges": [
+        [
+          17,
+          64
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          17,
+          64
+        ]
+      ]
+    }
+  }
+}

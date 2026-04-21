@@ -1,0 +1,33 @@
+{
+  "queries": {},
+  "references": {
+    "6YKY_B": {
+      "alignment_resid_ranges": [
+        [
+          28,
+          264
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          144,
+          164
+        ]
+      ]
+    },
+    "6YLC_D": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          293
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          153,
+          173
+        ]
+      ]
+    }
+  }
+}

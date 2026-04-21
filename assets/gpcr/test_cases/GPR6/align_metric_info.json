@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "GPR6": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          190
+        ],
+        [
+          195,
+          262
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          195,
+          232
+        ]
+      ]
+    }
+  },
+  "references": {
+    "8TYW_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          252
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          193,
+          222
+        ]
+      ]
+    },
+    "8T1V_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          249
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          186,
+          219
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "queries": {},
+  "references": {
+    "1HKA_A": {
+      "alignment_resid_ranges": [
+        [
+          43,
+          52
+        ],
+        [
+          83,
+          92
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          43,
+          52
+        ],
+        [
+          83,
+          92
+        ]
+      ]
+    },
+    "3IP0_A": {
+      "alignment_resid_ranges": [
+        [
+          43,
+          52
+        ],
+        [
+          83,
+          92
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          43,
+          52
+        ],
+        [
+          83,
+          92
+        ]
+      ]
+    }
+  }
+}

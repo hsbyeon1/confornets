@@ -1,0 +1,33 @@
+{
+  "queries": {},
+  "references": {
+    "5HHW_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          306
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          167,
+          180
+        ]
+      ]
+    },
+    "1IRK_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          303
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          164,
+          177
+        ]
+      ]
+    }
+  }
+}

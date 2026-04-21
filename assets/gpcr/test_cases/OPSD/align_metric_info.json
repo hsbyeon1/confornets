@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "OPSD": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          205
+        ],
+        [
+          207,
+          277
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          207,
+          246
+        ]
+      ]
+    }
+  },
+  "references": {
+    "4X1H_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          277
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          207,
+          246
+        ]
+      ]
+    },
+    "8A6E_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          258
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          193,
+          227
+        ]
+      ]
+    }
+  }
+}

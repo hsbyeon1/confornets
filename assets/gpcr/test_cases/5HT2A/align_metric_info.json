@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "5HT2A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          204
+        ],
+        [
+          243,
+          315
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          243,
+          281
+        ]
+      ]
+    }
+  },
+  "references": {
+    "8UWL_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          262
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          190,
+          228
+        ]
+      ]
+    },
+    "7WC7_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          259
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          188,
+          225
+        ]
+      ]
+    }
+  }
+}

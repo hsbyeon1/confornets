@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "ACM4": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          207
+        ],
+        [
+          363,
+          431
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          363,
+          401
+        ]
+      ]
+    }
+  },
+  "references": {
+    "7TRP_R": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          259
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          194,
+          229
+        ]
+      ]
+    },
+    "5DSG_B": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          268
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          201,
+          238
+        ]
+      ]
+    }
+  }
+}

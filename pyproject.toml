@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "confornet"
+version = "0.1.0"
+description = "Latents-based conformational control in OpenFold3"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "Apache-2.0" }
+authors = [{ name = "AQ Laboratory" }]
+
+dependencies = [
+    "openfold3>=0.4.0",
+    "torch",
+    "numpy",
+    "pandas",
+    "biotite",
+    "biopython",
+    "pyyaml",
+    "matplotlib",
+    "scipy",
+    "scikit-learn",
+    "seaborn",
+    "h5py",
+    "termcolor",
+    "tqdm",
+    "wandb",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff==0.14.14"]
+
+[tool.setuptools.packages.find]
+include = ["confornet*"]
+exclude = ["tests*", "scripts*", "analysis*", "assets*", "packages*"]

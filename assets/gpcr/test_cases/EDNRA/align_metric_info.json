@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "EDNRA": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          220
+        ],
+        [
+          225,
+          303
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          225,
+          264
+        ]
+      ]
+    }
+  },
+  "references": {
+    "8HCQ_R": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          293
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          216,
+          255
+        ]
+      ]
+    },
+    "8XVL_R": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          271
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          197,
+          232
+        ]
+      ]
+    }
+  }
+}

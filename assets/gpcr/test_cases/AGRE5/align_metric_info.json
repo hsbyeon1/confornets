@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "AGRE5": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          185
+        ],
+        [
+          193,
+          249
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          193,
+          218
+        ]
+      ]
+    }
+  },
+  "references": {
+    "8IKL_R": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          249
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          193,
+          218
+        ]
+      ]
+    },
+    "8IKJ_R": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          236
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          180,
+          205
+        ]
+      ]
+    }
+  }
+}

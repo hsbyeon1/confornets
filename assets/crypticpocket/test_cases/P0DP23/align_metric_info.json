@@ -1,0 +1,33 @@
+{
+  "queries": {},
+  "references": {
+    "1CLL_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          144
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          0,
+          144
+        ]
+      ]
+    },
+    "1CTR_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          141
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          0,
+          141
+        ]
+      ]
+    }
+  }
+}

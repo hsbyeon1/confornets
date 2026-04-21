@@ -1,0 +1,52 @@
+{
+  "queries": {
+    "SSR2": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          199
+        ],
+        [
+          204,
+          276
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          204,
+          243
+        ]
+      ]
+    }
+  },
+  "references": {
+    "7T10_R": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          275
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          203,
+          242
+        ]
+      ]
+    },
+    "7XN9_A": {
+      "alignment_resid_ranges": [
+        [
+          0,
+          271
+        ]
+      ],
+      "metric_resid_ranges": [
+        [
+          199,
+          238
+        ]
+      ]
+    }
+  }
+}
