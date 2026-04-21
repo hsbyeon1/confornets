@@ -6,5 +6,5 @@ defaults:
 
 benchmarks:
   toy_benchmark:
-    consistent: true
+    consistent: false
     rmsd_threshold: 2.0
