@@ -11,24 +11,9 @@ Argparse helpers live in `confornet/utils/cli.py` and are composed by every scri
 - `add_confidence_args`: `--compute-confidence` (write per-sample plddt/gpde/ptm CSV), `--save-full-confidence` (also dump raw tensors; implies `--compute-confidence`).
 
 
-## run_baseline.py
-
-Baseline OF3p diffusion sampling — no confornets, no training. Sanity check / reference distribution.
-
-```bash
-torchrun --nproc_per_node=4 -m scripts.run_baseline \
-    --benchmark domainmotion \
-    --checkpoint /path/to/of3-p2-155k.pt \
-    --num-seeds 20 --num-samples 5 \
-    --output-dir ./output/baseline
-```
-
-Extras: `--num-seeds`, `--num-samples`, `--num-steps` (default 200).
-
-
 ## run_diversity.py
 
-k-confornet diversity training and sampling. Trains multiple ConforNets jointly to produce diverse conformational samples. Core loop lives in `confornet.inference.diversity.run_diversity_seed`; this script is a thin dispatcher.
+Diversity training and sampling. Trains multiple ConforNets jointly to produce diverse conformational samples.
 
 ```bash
 torchrun --nproc_per_node=4 -m scripts.run_diversity \
@@ -39,16 +24,14 @@ torchrun --nproc_per_node=4 -m scripts.run_diversity \
     --output-dir ./output/diversity
 ```
 
-Flags: `--objective {coord_mse,dist_cdf_mse}`, `--k-confornets`, `--max-steps`, `--num-runs`, `--num-samples`, `--num-steps` (rollout length), `--lr`, `--grad-clip`, `--log-every`, `--save-steps` (training steps at which confornets+samples are written; default `[5, 10, 15, 20]`). Resume is on: completed `seed_*/` dirs are skipped.
-
 `--objective` picks the loss:
-- `coord_mse` (default) — pairwise L2 between per-ConforNet 1-step diffusion rollouts; bit-exact with prior paper runs.
-- `dist_cdf_mse` — pairwise L2 between per-ConforNet distogram CDFs; no rollout needed, strictly cheaper per step.
+- `coord_mse` (default) — pairwise L2 between per-ConforNet 1-step diffusion rollouts.
+- `dist_cdf_mse` — pairwise L2 between per-ConforNet distogram CDFs; no rollout needed.
 
 
 ## run_mse_training.py
 
-Single-ConforNet MSE training toward reference structures. Trains one ConforNet per (test case, reference). Core loop lives in `confornet.inference.mse_training.run_mse_then_sample`.
+MSE training toward reference structures. Trains one ConforNet per (test case, reference).
 
 ```bash
 torchrun --nproc_per_node=4 -m scripts.run_mse_training \
@@ -58,9 +41,6 @@ torchrun --nproc_per_node=4 -m scripts.run_mse_training \
     --num-runs 12 \
     --output-dir ./output/mse
 ```
-
-Flags: `--max-steps`, `--rollout-steps`, `--num-runs`, `--num-samples`, `--lr`, `--lr-annealing`, `--log-every`, `--subsampled-all-msa-rows`.
-
 
 ## run_transfer.py
 
@@ -94,6 +74,17 @@ torchrun --nproc_per_node=4 -m scripts.run_transfer \
 
 Extras: `--confornet-path`, `--mse-dir`, `--source` (comma-separated sources; default all), `--num-samples`. Targets come from the shared `--test-case` flag.
 
+## run_baseline.py
+
+Baseline OF3p diffusion sampling. Reference distribution.
+
+```bash
+torchrun --nproc_per_node=4 -m scripts.run_baseline \
+    --benchmark domainmotion \
+    --checkpoint /path/to/of3-p2-155k.pt \
+    --num-seeds 20 --num-samples 5 \
+    --output-dir ./output/baseline
+```
 
 ## evaluate.py
 
@@ -108,9 +99,6 @@ python -m scripts.evaluate \
     --output ./output/diversity/results.pkl
 ```
 
-Arguments: `--samples-dir` (required), `--benchmark` (required), `--mode` (`diversity|mse|transfer|of3p`), `--output` (required pickle path), `--assets-dir`, `--test-cases`, `--n-jobs`, `--executor` (`process|thread`), `--num-nodes`, `--node-idx`.
-
-
 ## summarize.py
 
 Takes one or more `EvalResults` pickles and emits summary plots / tables.
@@ -120,5 +108,3 @@ python -m scripts.summarize \
     --input ./output/diversity/results.pkl \
     --output ./output/diversity/summary
 ```
-
-Key flags: `--k-values`, `--max-rmsd`, `--threshold-steps`, `--n-bootstrap`, `--ref-to-ref-rmsd`, `--individual-free-energy`.
