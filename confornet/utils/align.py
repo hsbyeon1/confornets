@@ -1,6 +1,7 @@
 from typing import TYPE_CHECKING
 
 import biotite.structure as struc
+import numpy as np
 import torch
 from Bio import Align
 from Bio.Data.IUPACData import protein_letters_3to1
@@ -10,17 +11,51 @@ if TYPE_CHECKING:
 
 BACKBONE_ATOMS = ["N", "CA", "C", "O"]
 
+# Modified amino acids that retain a protein backbone. Map to their canonical
+# parent so the global aligner doesn't see 'X' (which causes scattered matches).
+MODIFIED_AA_3TO1 = {
+    "MSE": "M", "SEP": "S", "TPO": "T", "PTR": "Y",
+    "OCS": "C", "CSD": "C", "YCM": "C", "SEC": "U",
+    "PYL": "O", "MLY": "K", "HYP": "P", "CME": "C",
+    "CSO": "C", "CSS": "C", "CSX": "C", "KCX": "K",
+    "M3L": "K", "ALY": "K", "FME": "M", "CAS": "C",
+}
+
+
+def filter_to_protein(atom_array: struc.AtomArray) -> struc.AtomArray:
+    """Keep only residues with a full protein backbone (N, CA, C, O).
+    Drops waters, metal ions (incl. 'CA' calcium named atoms that get
+    conflated with C-alpha), and small-molecule ligands."""
+    res_starts = struc.get_residue_starts(atom_array)
+    keep = np.zeros(len(atom_array), dtype=bool)
+    for i in range(len(res_starts)):
+        start = res_starts[i]
+        end = res_starts[i + 1] if i + 1 < len(res_starts) else len(atom_array)
+        names = set(atom_array.atom_name[start:end].tolist())
+        if all(bb in names for bb in BACKBONE_ATOMS):
+            keep[start:end] = True
+    return atom_array[keep]
+
+
+def _res3_to_1(res_name: str) -> str:
+    res_upper = res_name.upper()
+    if res_upper in MODIFIED_AA_3TO1:
+        return MODIFIED_AA_3TO1[res_upper]
+    return protein_letters_3to1.get(res_name.capitalize(), "X")
+
 
 def get_sequence(atom_array: struc.AtomArray) -> str:
     ca_mask = atom_array.atom_name == "CA"
-    return "".join(
-        protein_letters_3to1.get(r.capitalize(), "X")
-        for r in atom_array[ca_mask].res_name
-    )
+    return "".join(_res3_to_1(r) for r in atom_array[ca_mask].res_name)
 
 
 def sequence_align(seq1: str, seq2: str) -> list[tuple[int, int]]:
-    aligner = Align.PairwiseAligner(mode="global", open_gap_score=-0.5)
+    """Local pairwise alignment. Local mode (vs global) avoids scattering
+    short-reference residues across a long query: with global mode + cheap
+    gap penalty, trailing reference residues get matched to letter coincidences
+    elsewhere in the query, producing phantom pairs that wreck downstream RMSD.
+    Local alignment finds the best contiguous match instead."""
+    aligner = Align.PairwiseAligner(mode="local", match_score=2.0, mismatch_score=-1.0, open_gap_score=-2.0, extend_gap_score=-0.5)
     alignment = aligner.align(seq1, seq2)[0]
     matching = []
     for (s1, e1), (s2, e2) in zip(alignment.aligned[0], alignment.aligned[1]):
