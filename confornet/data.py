@@ -8,7 +8,7 @@ import pandas as pd
 import torch
 import yaml
 
-from confornet.utils.align import get_sequence
+from confornet.utils.align import filter_to_protein, get_sequence
 from confornet.utils.io import load_structure
 
 logger = logging.getLogger(__name__)
@@ -61,6 +61,7 @@ class Reference:
         metric_resid_ranges: list | None = None,
     ):
         atom_array = load_structure(path)
+        atom_array = filter_to_protein(atom_array)
         sequence = get_sequence(atom_array)
         coordinates = torch.from_numpy(atom_array.coord).float()
 
