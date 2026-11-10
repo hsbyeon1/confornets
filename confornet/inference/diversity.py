@@ -13,6 +13,8 @@ from confornet.core.losses import (
     distogram_to_cdf,
     pairwise_mse_loss,
     pairwise_tensor_mse,
+    parse_resid_ranges,
+    select_loss_atoms,
 )
 from confornet.core.trunk import (
     _compute_confidence_scores,
@@ -95,6 +97,7 @@ def diversity_training_step(
     device: torch.device,
     num_recycles: int = 10,
     objective: ObjectiveType = ObjectiveType.COORD_MSE,
+    loss_atoms: tuple[torch.Tensor | None, torch.Tensor | None] = (None, None),
 ) -> tuple[float, torch.Tensor | None, dict]:
     k = confornet_manager.k
     batch = query.batch
@@ -136,7 +139,7 @@ def diversity_training_step(
             no_samples=1,
             initial_noise=fixed_noise_k,
         )
-        loss = pairwise_mse_loss(xl_pred)
+        loss = pairwise_mse_loss(xl_pred, frame_idx=loss_atoms[0], loss_idx=loss_atoms[1])
         xl_pred_detached = xl_pred.detach()
     else:  # DIST_CDF_MSE
         zij = zij_trunk.squeeze(1)  # [k, N, N, c_z]
@@ -238,6 +241,33 @@ def generate_rollout_samples(
     return coords, conf
 
 
+def resolve_loss_atoms(
+    query: PredictionQuery, args, device: torch.device
+) -> tuple[torch.Tensor | None, torch.Tensor | None]:
+    """(frame_idx, loss_idx) for the coord_mse objective from --loss-frame-res / --loss-res.
+
+    Unset flags give None (= all atoms), i.e. the original whole-structure loss.
+    The frame always uses C-alpha atoms; --loss-atoms selects CA or heavy atoms for the loss.
+    """
+    loss_res = getattr(args, "loss_res", None)
+    frame_res = getattr(args, "loss_frame_res", None)
+    chain = getattr(args, "loss_chain", "A")
+    out = []
+    for spec, atoms in ((frame_res, "ca"), (loss_res, getattr(args, "loss_atoms", "ca"))):
+        if spec:
+            idx = select_loss_atoms(query.atom_array, parse_resid_ranges(spec), atoms, chain)
+            out.append(torch.as_tensor(idx, device=device))
+        else:
+            out.append(None)
+    if out[0] is not None or out[1] is not None:
+        logger.info(
+            f"Residue-specific diversity loss: frame={frame_res or 'all atoms'} "
+            f"({'all' if out[0] is None else len(out[0])} atoms), loss={loss_res or 'all atoms'} "
+            f"({'all' if out[1] is None else len(out[1])} atoms), chain={chain}"
+        )
+    return out[0], out[1]
+
+
 def run_diversity_seed(
     model: nn.Module,
     query: PredictionQuery,
@@ -255,6 +285,9 @@ def run_diversity_seed(
     torch.manual_seed(seed * 1000)
 
     objective = ObjectiveType(args.objective)
+    loss_atoms = resolve_loss_atoms(query, args, device)
+    if objective is not ObjectiveType.COORD_MSE and any(a is not None for a in loss_atoms):
+        raise ValueError("--loss-res / --loss-frame-res apply to the coord_mse objective only")
     noise_cfg = model.config.architecture.noise_schedule
     c_z = model.config.architecture.shared.c_z
     manager = KConforNetManager(args.k_confornets, c_z, device, args.lr, args.grad_clip)
@@ -296,6 +329,7 @@ def run_diversity_seed(
             device,
             args.num_recycles,
             objective,
+            loss_atoms,
         )
         loss_rows.append((step, m["loss"], m[objective.metric_key], m["lr"]))
 

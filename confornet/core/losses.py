@@ -1,19 +1,83 @@
+import numpy as np
 import torch
 import torch.nn.functional as F
 
-from confornet.utils.align import kabsch_align
+from confornet.utils.align import kabsch_align, kabsch_transform
 
 
-def aligned_mse_loss(x: torch.Tensor, x_target: torch.Tensor) -> torch.Tensor:
-    """MSE loss after rigid alignment (aligns x_target to x)."""
-    x_target_aligned = kabsch_align(x_target, x).detach()
-    return F.mse_loss(x, x_target_aligned)
+def aligned_mse_loss(
+    x: torch.Tensor,
+    x_target: torch.Tensor,
+    frame_idx: torch.Tensor | None = None,
+    loss_idx: torch.Tensor | None = None,
+) -> torch.Tensor:
+    """MSE loss after rigid alignment (aligns x_target to x).
+
+    frame_idx: atom indices used to compute the superposition (default: all atoms).
+    loss_idx:  atom indices the MSE is taken over (default: all atoms).
+    With neither given this is the original whole-structure loss. The aligned
+    target is detached in every case, so gradient flows through x only.
+    """
+    if frame_idx is None and loss_idx is None:
+        x_target_aligned = kabsch_align(x_target, x).detach()
+        return F.mse_loss(x, x_target_aligned)
+
+    fi = slice(None) if frame_idx is None else frame_idx
+    li = slice(None) if loss_idx is None else loss_idx
+    with torch.no_grad():
+        R, mobile_mean, target_mean = kabsch_transform(x_target[fi].float(), x[fi].float())
+        x_target_aligned = (x_target[li].float() - mobile_mean) @ R.T + target_mean
+    return F.mse_loss(x[li].float(), x_target_aligned).to(x.dtype)
 
 
-def pairwise_mse_loss(xl_all: torch.Tensor) -> torch.Tensor:
+def parse_resid_ranges(spec: str) -> list[int]:
+    """'245-252', '3-24,43-64,122-139' or '101' -> sorted residue numbers (inclusive)."""
+    out: set[int] = set()
+    for part in spec.split(","):
+        part = part.strip()
+        if not part:
+            continue
+        lo, hi = part.split("-") if "-" in part else (part, part)
+        out.update(range(int(lo), int(hi) + 1))
+    return sorted(out)
+
+
+def select_loss_atoms(
+    atom_array,
+    resids: list[int],
+    atoms: str = "ca",
+    chain: str | None = "A",
+) -> np.ndarray:
+    """Atom indices (into the query atom_array / coordinate tensor) for residues `resids`.
+
+    atoms: 'ca' (C-alpha only) or 'heavy' (all non-hydrogen atoms).
+    Residues are matched on atom_array.res_id (the numbering written to the output
+    CIF) and, unless chain is None, atom_array.chain_id. Raises if any residue is absent.
+    """
+    if atoms not in ("ca", "heavy"):
+        raise ValueError(f"atoms must be 'ca' or 'heavy', got {atoms!r}")
+    sel = np.isin(atom_array.res_id, resids)
+    if chain is not None:
+        sel &= atom_array.chain_id == chain
+    sel &= (atom_array.atom_name == "CA") if atoms == "ca" else (atom_array.element != "H")
+    idx = np.where(sel)[0]
+    missing = sorted(set(resids) - set(atom_array.res_id[idx].tolist()))
+    if missing:
+        raise ValueError(f"residues not found on chain {chain}: {missing}")
+    return idx
+
+
+def pairwise_mse_loss(
+    xl_all: torch.Tensor,
+    frame_idx: torch.Tensor | None = None,
+    loss_idx: torch.Tensor | None = None,
+) -> torch.Tensor:
     """
     Mean pairwise MSE between k structures for diversity maximization.
     Returns NEGATIVE for maximization.
+
+    frame_idx / loss_idx: optional atom subsets for the per-pair superposition and
+    for the MSE (see aligned_mse_loss). Default: all atoms for both.
     """
     k = xl_all.shape[0]
     if k < 2:
@@ -30,8 +94,8 @@ def pairwise_mse_loss(xl_all: torch.Tensor) -> torch.Tensor:
 
     for i in range(k):
         for j in range(i + 1, k):
-            mse_ij = aligned_mse_loss(xl_flat[i], xl_flat[j])
-            mse_ji = aligned_mse_loss(xl_flat[j], xl_flat[i])
+            mse_ij = aligned_mse_loss(xl_flat[i], xl_flat[j], frame_idx, loss_idx)
+            mse_ji = aligned_mse_loss(xl_flat[j], xl_flat[i], frame_idx, loss_idx)
             total_mse = total_mse + mse_ij + mse_ji
             n_pairs += 2
 
