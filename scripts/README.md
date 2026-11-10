@@ -40,6 +40,16 @@ Each atom set is `[chain, residue, atom]` entries (`"start:end"` is half-open); 
 within a set is used. The loss is then the mean over ConforNet pairs of the mean squared
 difference of those pair distances (squared distance-RMSD), with no superposition.
 
+`atom_set_pairs: [[set_a, set_b], ...]` (ConforNets extension, same entry) adds only the cross
+pairs a x b. Example, TM6 intracellular end (D6IC residues) against a TM1/2/4 anchor:
+
+```json
+"guidances": [{"particle": {"atom_set_pairs": [[
+    [["A", "245:253", "CA"]],
+    [["A", "3:25", "CA"], ["A", "43:65", "CA"], ["A", "122:140", "CA"]]
+]]}}]
+```
+
 
 ## run_mse_training.py
 

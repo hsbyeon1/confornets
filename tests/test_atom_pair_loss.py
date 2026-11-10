@@ -116,3 +116,16 @@ def test_load_guidances_forms(tmp_path):
     bad = tmp_path / "bad.json"; bad.write_text(json.dumps({"x": 1}))
     with pytest.raises(ValueError):
         load_guidances(bad)
+
+
+def test_atom_set_pairs_cross_only():
+    aa = _toy_array()
+    ca = {r: int(np.where((aa.res_id == r) & (aa.atom_name == "CA") & (aa.chain_id == "A"))[0][0]) for r in range(1, 11)}
+    g = [{"particle": {"atom_set_pairs": [[[["A", "8:10", "CA"]], [["A", "1:4", "CA"]]]]}}]
+    got = {tuple(p) for p in build_pair_index(aa, g).T.tolist()}
+    want = {tuple(sorted((ca[a], ca[b]))) for a in (8, 9) for b in (1, 2, 3)}
+    assert got == want                                       # 6 cross pairs, no 1-2 / 8-9 pairs
+    both = [{"particle": {"atom_sets": [[["A", "1:3", "CA"]]], "atom_set_pairs": g[0]["particle"]["atom_set_pairs"]}}]
+    assert {tuple(p) for p in build_pair_index(aa, both).T.tolist()} == want | {(ca[1], ca[2])}
+    with pytest.raises(ValueError):
+        build_pair_index(aa, [{"particle": {"atom_set_pairs": [[[["A", 1, "CA"]]]]}}])

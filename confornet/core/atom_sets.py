@@ -16,7 +16,11 @@ guidance specification can be copied between the tools unchanged::
 An *atom set* is a list of atom specifications ``[chain_id, residue, atom_name]`` where
 ``residue`` is a 1-based residue number or a half-open ``"start:end"`` range (``"74:87"`` is
 residues 74-86). Every pair of atoms within one set becomes a pair (an all-pairs clique); the
-pairs of all sets and all entries are united. Residue numbers are ``atom_array.res_id``,
+pairs of all sets and all entries are united.
+
+``atom_set_pairs`` (ConforNets extension) lists ``[set_a, set_b]`` couples; each contributes only
+the cross pairs a x b, e.g. TM6 intracellular-end atoms against a TM1/2/4 anchor without the
+anchor-anchor pairs a clique would add. An entry may carry either key or both. Residue numbers are ``atom_array.res_id``,
 i.e. the numbering written to the output CIFs.
 """
 
@@ -87,13 +91,21 @@ def build_pair_index(atom_array, guidances: Iterable[Any] | None) -> torch.Tenso
         ((kind, values),) = entry.items()
         if kind != "particle":
             raise ValueError(f"Unsupported guidance type {kind!r}; only 'particle' atom sets are used.")
-        if "atom_sets" not in values:
-            raise ValueError("A 'particle' entry needs an 'atom_sets' field.")
-        for atom_set in values["atom_sets"]:
+        if "atom_sets" not in values and "atom_set_pairs" not in values:
+            raise ValueError("A 'particle' entry needs 'atom_sets' and/or 'atom_set_pairs'.")
+        for atom_set in values.get("atom_sets", []):
             idx = resolve_atom_indices(atom_array, parse_atom_set(atom_set))
             if len(set(idx)) < 2:
                 raise ValueError(f"Each atom set needs at least two atoms, got {len(set(idx))}.")
             pairs.update(combinations(sorted(set(idx)), 2))
+        for couple in values.get("atom_set_pairs", []):
+            if len(couple) != 2:
+                raise ValueError(f"Each atom_set_pairs entry must be [set_a, set_b], got {couple!r}.")
+            ia = set(resolve_atom_indices(atom_array, parse_atom_set(couple[0])))
+            ib = set(resolve_atom_indices(atom_array, parse_atom_set(couple[1])))
+            if not ia or not ib:
+                raise ValueError("Both sets of an atom_set_pairs entry need at least one atom.")
+            pairs.update((min(a, b), max(a, b)) for a in ia for b in ib if a != b)
     if not pairs:
         return None
     arr = np.asarray(sorted(pairs), dtype=np.int64)
