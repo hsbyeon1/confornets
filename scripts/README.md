@@ -24,6 +24,8 @@ torchrun --nproc_per_node=4 -m scripts.run_diversity \
     --output-dir ./output/diversity
 ```
 
+`--lr-halve-every N` (default 5) halves the learning rate every N steps; 0 keeps it constant.
+
 `--objective` picks the loss:
 - `coord_mse` (default) — pairwise L2 between per-ConforNet 1-step diffusion rollouts.
 - `dist_cdf_mse` — pairwise L2 between per-ConforNet distogram CDFs; no rollout needed.

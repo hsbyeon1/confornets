@@ -330,7 +330,8 @@ def run_diversity_seed(
                 f"{objective.metric_key}={m[objective.metric_key]:.4f}"
             )
 
-        if step > 0 and step % 5 == 0:
+        halve_every = getattr(args, "lr_halve_every", 5)
+        if halve_every and step > 0 and step % halve_every == 0:
             manager.halve_lr()
 
         if step in save_steps:

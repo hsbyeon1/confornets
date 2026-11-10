@@ -45,6 +45,12 @@ def main():
         help="Diffusion steps for sample rollouts.",
     )
     parser.add_argument("--lr", type=float, default=1e-3)
+    parser.add_argument(
+        "--lr-halve-every",
+        type=int,
+        default=5,
+        help="Halve the ConforNet learning rate every N training steps (0 = constant lr).",
+    )
     parser.add_argument("--grad-clip", type=float, default=10.0)
     parser.add_argument("--log-every", type=int, default=1)
     parser.add_argument(
