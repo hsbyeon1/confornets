@@ -28,22 +28,17 @@ torchrun --nproc_per_node=4 -m scripts.run_diversity \
 - `coord_mse` (default) — pairwise L2 between per-ConforNet 1-step diffusion rollouts.
 - `dist_cdf_mse` — pairwise L2 between per-ConforNet distogram CDFs; no rollout needed.
 
-Residue-specific `coord_mse` (optional; default is the whole structure):
+`--loss-guidance <json>` (optional, `coord_mse` only) restricts the diversity objective to chosen
+atom pairs, align-free. The JSON holds a `guidances` block in the boltz2 / Protenix guidance format
+(a whole input JSON with that key works too):
 
-- `--loss-frame-res` — residue ranges whose CA atoms define the per-pair Kabsch superposition
-  (the reference frame). These atoms set the frame only; the loss is not taken over them.
-- `--loss-res` — residue ranges whose atoms the pairwise MSE is computed over (what diversity is
-  maximised on). `--loss-atoms ca|heavy` picks CA only (default) or all heavy atoms.
-- `--loss-chain` — chain the ranges refer to (default `A`). Ranges use the query's `res_id`
-  numbering, i.e. the residue numbers written to the output CIFs; `a-b` is inclusive.
-
-Either flag alone falls back to all atoms for the other. Example: diversify the intracellular end
-of TM6 relative to a TM1/2/4 frame:
-
-```bash
-python -m scripts.run_diversity ... \
-    --loss-frame-res 3-24,43-64,122-139 --loss-res 245-252
+```json
+"guidances": [{"particle": {"atom_sets": [[["A", "74:87", "CA"], ["A", "255:268", "CA"]]]}}]
 ```
+
+Each atom set is `[chain, residue, atom]` entries (`"start:end"` is half-open); every atom pair
+within a set is used. The loss is then the mean over ConforNet pairs of the mean squared
+difference of those pair distances (squared distance-RMSD), with no superposition.
 
 
 ## run_mse_training.py

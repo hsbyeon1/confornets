@@ -147,18 +147,10 @@ def get_matching_backbone_indices(
     return query_indices, ref_indices
 
 
-def kabsch_transform(
-    mobile: torch.Tensor, target: torch.Tensor
-) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
-    """Rigid transform superposing mobile onto target (Kabsch).
-
-    Returns (R, mobile_mean, target_mean); apply to any points X of the mobile
-    structure as ``(X - mobile_mean).float() @ R.T + target_mean``.
-    """
-    mobile_mean = mobile.mean(dim=0, keepdim=True)
-    target_mean = target.mean(dim=0, keepdim=True)
-    mobile_c = mobile - mobile_mean
-    target_c = target - target_mean
+def kabsch_align(mobile: torch.Tensor, target: torch.Tensor) -> torch.Tensor:
+    """Align mobile to target using Kabsch algorithm."""
+    mobile_c = mobile - mobile.mean(dim=0, keepdim=True)
+    target_c = target - target.mean(dim=0, keepdim=True)
 
     H = target_c.T @ mobile_c
     U, _, Vh = torch.linalg.svd(H.float())
@@ -167,10 +159,5 @@ def kabsch_transform(
     F = torch.eye(3, device=mobile.device, dtype=U.dtype)
     F[2, 2] = d
     R = U @ F @ Vh
-    return R, mobile_mean, target_mean
 
-
-def kabsch_align(mobile: torch.Tensor, target: torch.Tensor) -> torch.Tensor:
-    """Align mobile to target using Kabsch algorithm."""
-    R, mobile_mean, target_mean = kabsch_transform(mobile, target)
-    return ((mobile - mobile_mean).float() @ R.T + target_mean).to(mobile.dtype)
+    return (mobile_c.float() @ R.T + target.mean(dim=0, keepdim=True)).to(mobile.dtype)

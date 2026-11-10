@@ -27,30 +27,12 @@ def main():
         "--objective", choices=["coord_mse", "dist_cdf_mse"], default="coord_mse"
     )
     parser.add_argument(
-        "--loss-res",
+        "--loss-guidance",
         type=str,
         default=None,
-        help="Residue ranges the coord_mse diversity loss is computed over, e.g. "
-        "'245-252' (res_id numbering of the query). Default: all atoms.",
-    )
-    parser.add_argument(
-        "--loss-frame-res",
-        type=str,
-        default=None,
-        help="Residue ranges whose CA atoms define the per-pair superposition, e.g. "
-        "'3-24,43-64,122-139'. Default: all atoms.",
-    )
-    parser.add_argument(
-        "--loss-atoms",
-        choices=["ca", "heavy"],
-        default="ca",
-        help="Atoms of the --loss-res residues used in the loss.",
-    )
-    parser.add_argument(
-        "--loss-chain",
-        type=str,
-        default="A",
-        help="Chain ID the residue ranges refer to.",
+        help="JSON with a 'guidances' block (particle atom_sets, as in the boltz2/Protenix "
+        "guidance inputs). coord_mse then maximises the pairwise differences of the "
+        "atom-pair distances within each set instead of the whole-structure aligned MSE.",
     )
     parser.add_argument("--k-confornets", type=int, default=2)
     parser.add_argument("--max-steps", type=int, default=21)
