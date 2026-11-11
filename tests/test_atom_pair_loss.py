@@ -129,3 +129,22 @@ def test_atom_set_pairs_cross_only():
     assert {tuple(p) for p in build_pair_index(aa, both).T.tolist()} == want | {(ca[1], ca[2])}
     with pytest.raises(ValueError):
         build_pair_index(aa, [{"particle": {"atom_set_pairs": [[[["A", 1, "CA"]]]]}}])
+
+
+def test_atom_pairs_to_token_pairs():
+    from confornet.core.atom_sets import atom_pairs_to_token_pairs
+    a2t = torch.tensor([[0, 0, 1, 1, 2, 3]])
+    pi = torch.tensor([[0, 1, 0, 2, 5, 4], [1, 2, 4, 3, 0, 5]])   # (0,1) same token; (5,0)->(0,3)
+    got = atom_pairs_to_token_pairs(pi, a2t)
+    assert {tuple(p) for p in got.T.tolist()} == {(0, 1), (0, 2), (0, 3), (2, 3)}
+
+
+def test_distogram_restricted_loss_outside_ignored():
+    from confornet.core.losses import distogram_to_cdf, pairwise_tensor_mse
+    torch.manual_seed(0)
+    logits = torch.randn(2, 6, 6, 64)
+    tp = torch.tensor([[0, 1], [3, 4]])
+    sub_ = distogram_to_cdf(logits)[:, tp[0], tp[1]]
+    assert sub_.shape == (2, 2, 64)
+    other = logits.clone(); other[:, 5, 5] += 10.0      # outside the pairs
+    assert torch.equal(pairwise_tensor_mse(distogram_to_cdf(other)[:, tp[0], tp[1]]), pairwise_tensor_mse(sub_))

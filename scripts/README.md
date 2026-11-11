@@ -39,7 +39,8 @@ atom pairs, align-free. The JSON holds a `guidances` block in the boltz2 / Prote
 ```
 
 Each atom set is `[chain, residue, atom]` entries (`"start:end"` is half-open); every atom pair
-within a set is used. The loss is then the mean over ConforNet pairs of the mean squared
+within a set is used. With `--objective dist_cdf_mse` the same atom pairs are mapped to token
+pairs (same-token pairs dropped) and only those distogram CDF entries are compared. Otherwise the loss is the mean over ConforNet pairs of the mean squared
 difference of those pair distances (squared distance-RMSD), with no superposition.
 
 `atom_set_pairs: [[set_a, set_b], ...]` (ConforNets extension, same entry) adds only the cross

@@ -128,3 +128,16 @@ def load_guidances(path: str | Path) -> list:
     if not isinstance(data, list):
         raise ValueError(f"{path}: 'guidances' must be a list")
     return data
+
+
+def atom_pairs_to_token_pairs(pair_index: torch.Tensor, atom_to_token: torch.Tensor) -> torch.Tensor:
+    """Map a ``[2, N_pair]`` atom-pair index to unique token pairs ``[2, M]`` (i < j).
+
+    Used by the distogram objective, which works on token pairs. Atom pairs that fall in
+    the same token (e.g. N and CA of one residue) are dropped.
+    """
+    a2t = atom_to_token.reshape(-1).to(pair_index.device).long()
+    ti, tj = a2t[pair_index[0]], a2t[pair_index[1]]
+    keep = ti != tj
+    lo, hi = torch.minimum(ti, tj)[keep], torch.maximum(ti, tj)[keep]
+    return torch.unique(torch.stack([lo, hi]), dim=1)

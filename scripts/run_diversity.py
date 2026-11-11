@@ -32,7 +32,8 @@ def main():
         default=None,
         help="JSON with a 'guidances' block (particle atom_sets, as in the boltz2/Protenix "
         "guidance inputs). coord_mse then maximises the pairwise differences of the "
-        "atom-pair distances within each set instead of the whole-structure aligned MSE.",
+        "atom-pair distances within each set instead of the whole-structure aligned MSE; "
+        "with --objective dist_cdf_mse, the distogram CDFs of the corresponding token pairs.",
     )
     parser.add_argument("--k-confornets", type=int, default=2)
     parser.add_argument("--max-steps", type=int, default=21)

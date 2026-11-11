@@ -7,7 +7,7 @@ import torch
 import torch.nn as nn
 from openfold3.core.utils.tensor_utils import tensor_tree_map
 
-from confornet.core.atom_sets import build_pair_index, load_guidances
+from confornet.core.atom_sets import atom_pairs_to_token_pairs, build_pair_index, load_guidances
 from confornet.core.confornet import ConforNet
 from confornet.core.diffusion import create_noise_schedule, diffusion_sample
 from confornet.core.losses import (
@@ -148,6 +148,8 @@ def diversity_training_step(
         zij = zij_trunk.squeeze(1)  # [k, N, N, c_z]
         distogram_logits = model.aux_heads.distogram(z=zij)
         cdf = distogram_to_cdf(distogram_logits)
+        if loss_pair_index is not None:  # token pairs, see run_diversity_seed
+            cdf = cdf[:, loss_pair_index[0], loss_pair_index[1]]  # [k, M, bins]
         loss = pairwise_tensor_mse(cdf)
         xl_pred_detached = None
 
@@ -276,9 +278,10 @@ def run_diversity_seed(
     objective = ObjectiveType(args.objective)
     loss_pair_index = resolve_loss_pairs(query, args)
     if loss_pair_index is not None:
-        if objective is not ObjectiveType.COORD_MSE:
-            raise ValueError("--loss-guidance applies to the coord_mse objective only")
         loss_pair_index = loss_pair_index.to(device)
+        if objective is ObjectiveType.DIST_CDF_MSE:
+            loss_pair_index = atom_pairs_to_token_pairs(loss_pair_index, query.batch["atom_to_token_index"])
+            logger.info(f"Distogram objective restricted to {loss_pair_index.shape[1]} token pairs")
     noise_cfg = model.config.architecture.noise_schedule
     c_z = model.config.architecture.shared.c_z
     manager = KConforNetManager(args.k_confornets, c_z, device, args.lr, args.grad_clip)
